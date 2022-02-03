@@ -1,0 +1,39 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "api for business",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --exec babel-node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^3.6.0",
+    "apollo-server": "^3.5.0",
+    "apollo-server-core": "^3.5.0",
+    "apollo-server-express": "^3.5.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "express-graphql": "^0.12.0",
+    "express-validator": "^6.13.0",
+    "graphql": "^15.8.0",
+    "install": "^0.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "nodemo": "^1.0.0",
+    "prisma": "^3.6.0"
+  }
+}

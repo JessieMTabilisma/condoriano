@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider             = "mysql"
+  url                  = env("DB_URL")
+  shadowDatabaseUrl    = env("SHADOW_DATABASE_URL")
+  referentialIntegrity = "prisma"
+  planetScaleMode   = true
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  name String
+  email String @unique
+  password String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// enum Role{
+//   USER
+//   ADMIN
+// }
+model Reports {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  truckmodel String @unique
+  author String 
+  grossWeight Float
+  truckWeight Float
+  Rice Int
+  Darak1 Int
+  Darak3 Int
+  Binlid Int
+  Sorter Int
+}
